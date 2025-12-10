@@ -99,13 +99,13 @@ proxy-groups:
   - {name: 📹 YouTube, type: select, proxies: [🚀 默认代理, 🔯 美国故转, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, ♻️ 美国自动, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, 直连]}
   - {name: 🍀 Google, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
   - {name: 🤖 ChatGPT, type: select, proxies: [🚀 默认代理, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
-  - {name: 👨🏿‍💻 GitHub, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动,直连]}
+  #- {name: 👨🏿‍💻 GitHub, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动,直连]}
   - {name: 🐬 OneDrive, type: select, proxies: [🚀 默认代理, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
   - {name: 🪟 Microsoft, type: select, proxies: [🚀 默认代理, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
-  - {name: 🎵 TikTok, type: select, proxies: [🚀 默认代理, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
+  #- {name: 🎵 TikTok, type: select, proxies: [🚀 默认代理, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
   - {name: 📲 Telegram, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
-  - {name: 🎥 NETFLIX, type: select, proxies: [🚀 默认代理, 🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
-  - {name: 💶 PayPal, type: select, proxies: [🚀 默认代理, 🔯 日本故转, 🔯 香港故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
+  #- {name: 🎥 NETFLIX, type: select, proxies: [🚀 默认代理, 🔯 狮城故转, 🔯 香港故转, 🔯 日本故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
+  #- {name: 💶 PayPal, type: select, proxies: [🚀 默认代理, 🔯 日本故转, 🔯 香港故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, 🔯 香港故转, 🔯 日本故转, 🔯 狮城故转, 🔯 美国故转, ♻️ 香港自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 美国自动, 直连]}
   - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?=.*(香港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"}
@@ -136,19 +136,19 @@ rules:
   #其余的规则
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
-  - RULE-SET,github_domain,👨🏿‍💻 GitHub
+  #- RULE-SET,github_domain,👨🏿‍💻 GitHub
   - RULE-SET,youtube_domain,📹 YouTube
   - RULE-SET,google_domain,🍀 Google
   - RULE-SET,onedrive_domain,🐬 OneDrive
   - RULE-SET,microsoft_domain,🪟 Microsoft
   - RULE-SET,apple_domain,直连
-  - RULE-SET,tiktok_domain,🎵 TikTok
+  #- RULE-SET,tiktok_domain,🎵 TikTok
   - RULE-SET,telegram_domain,📲 Telegram
-  - RULE-SET,netflix_domain,🎥 NETFLIX
-  - RULE-SET,paypal_domain,💶 PayPal
+  #- RULE-SET,netflix_domain,🎥 NETFLIX
+  #- RULE-SET,paypal_domain,💶 PayPal
   - RULE-SET,apple_ip,直连
   - RULE-SET,google_ip,🍀 Google
-  - RULE-SET,netflix_ip,🎥 NETFLIX
+  #- RULE-SET,netflix_ip,🎥 NETFLIX
   - RULE-SET,telegram_ip,📲 Telegram
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,直连
@@ -191,4 +191,5 @@ rule-providers:
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
   apple_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
+
 
