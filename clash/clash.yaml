@@ -15,7 +15,8 @@ proxy-providers:
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
-
+  - {name: 拒绝, type: reject}
+  
 # 全局配置 
 mixed-port: 7890
 allow-lan: true
@@ -127,13 +128,10 @@ proxy-groups:
 rules:
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连
-  
-  #个人新增的app外链
-  - DOMAIN-SUFFIX,snssdk.com,直连  #字节跳动旗下应用
-
-  #个人新增的屏蔽广告域名
-  - DOMAIN-SUFFIX,appsflyersdk.com,REJECT
-  - DOMAIN-SUFFIX,flashtalking.com,REJECT
+  #个人规则
+  - RULE-SET,my_direct_domains,直连
+  - RULE-SET,my_proxy_domains,🚀 默认代理
+  - RULE-SET,my_reject_domains,拒绝
 
   #其余的规则
   - RULE-SET,proxylite,🚀 默认代理
@@ -162,11 +160,17 @@ rules:
 rule-anchor:
   ip: &ip {type: http, interval: 86400, behavior: ipcidr, format: mrs}
   domain: &domain {type: http, interval: 86400, behavior: domain, format: mrs}
+  text_domain: &text_domain {type: http, interval: 86400, behavior: domain, format: text}
   class: &class {type: http, interval: 86400, behavior: classical, format: text}
 rule-providers: 
   fakeipfilter_domain: {<<: *domain, url: "https://raw.githubusercontent.com/wwqgtxx/clash-rules/release/fakeip-filter.mrs"}
   private_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/private.mrs"}
-  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/qichiyuhub/rule/refs/heads/main/proxy.list"}
+  # 个人
+  proxylite: { <<: *class, url: "https://raw.githubusercontent.com/dzderek/rule/refs/heads/main/clash/proxy.list"}
+  my_direct_domains: { <<: *text_domain, url: "https://raw.githubusercontent.com/dzderek/rule/refs/heads/main/clash/direct_domains.txt"}
+  my_proxy_domains: { <<: *text_domain, url: "https://raw.githubusercontent.com/dzderek/rule/refs/heads/main/clash/proxy_domains.txt"}
+  my_reject_domains: { <<: *text_domain, url: "https://raw.githubusercontent.com/dzderek/rule/refs/heads/main/clash/reject_domains.txt"}
+  
   ai: {  <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/category-ai-!cn.mrs" }
   youtube_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.mrs"}
   google_domain: { <<: *domain, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.mrs"}
@@ -187,3 +191,4 @@ rule-providers:
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   netflix_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/netflix.mrs"}
   apple_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
+
