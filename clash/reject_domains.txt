@@ -1,0 +1,2 @@
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-SUFFIX,flashtalking.com
