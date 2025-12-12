@@ -15,7 +15,6 @@ proxy-providers:
 # 节点信息
 proxies:
   - {name: 直连, type: direct}
-  - {name: 拒绝, type: reject}
   
 # 全局配置 
 mixed-port: 7893
@@ -130,7 +129,7 @@ rules:
   #个人规则
   - RULE-SET,my_direct_domains,直连
   - RULE-SET,my_proxy_domains,🚀 默认代理
-  - RULE-SET,my_reject_domains,拒绝
+  - RULE-SET,my_reject_domains,REJECT
 
   #其余的规则
   - RULE-SET,proxylite,🚀 默认代理
@@ -182,6 +181,7 @@ rule-providers:
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   apple_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
+
 
 
 
