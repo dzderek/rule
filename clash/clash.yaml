@@ -18,7 +18,7 @@ proxies:
   - {name: 拒绝, type: reject}
   
 # 全局配置 
-mixed-port: 7890
+mixed-port: 7893
 allow-lan: true
 bind-address: "*"
 ipv6: false
@@ -182,6 +182,7 @@ rule-providers:
   google_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/google.mrs"}
   telegram_ip: { <<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geoip/telegram.mrs"}
   apple_ip: {<<: *ip, url: "https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo-lite/geoip/apple.mrs"}
+
 
 
 
