@@ -1,11 +1,8 @@
 DOMAIN-SUFFIX,bulianglin.com
-DOMAIN-SUFFIX,69shuba.com
-DOMAIN-SUFFIX,cdnshu.com
 DOMAIN-SUFFIX,pig333.cn
 DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,bygcloud.com
 DOMAIN-SUFFIX,ssrdog.com
 DOMAIN-SUFFIX,lastpass.com
 DOMAIN-SUFFIX,europa.eu
-DOMAIN-SUFFIX,sososhu.com
 DOMAIN-SUFFIX,321n.net
