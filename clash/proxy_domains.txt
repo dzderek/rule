@@ -7,3 +7,4 @@ DOMAIN-SUFFIX,lastpass.com
 DOMAIN-SUFFIX,europa.eu
 DOMAIN-SUFFIX,321n.net
 DOMAIN-SUFFIX,v2ex.com
+DOMAIN-SUFFIX,clashverge.dev
