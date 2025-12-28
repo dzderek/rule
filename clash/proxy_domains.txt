@@ -6,5 +6,4 @@ DOMAIN-SUFFIX,ssrdog.com
 DOMAIN-SUFFIX,lastpass.com
 DOMAIN-SUFFIX,europa.eu
 DOMAIN-SUFFIX,321n.net
-DOMAIN-SUFFIX,gfw.sb
 DOMAIN-SUFFIX,v2ex.com
