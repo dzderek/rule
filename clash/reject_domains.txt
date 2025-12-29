@@ -1,3 +1,2 @@
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,flashtalking.com
-DOMAIN-SUFFIX,qidian.com
