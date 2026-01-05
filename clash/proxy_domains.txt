@@ -9,3 +9,4 @@ DOMAIN-SUFFIX,321n.net
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,clashverge.dev
 DOMAIN-SUFFIX,69shuba.com
+DOMAIN-SUFFIX,ipwho.is
