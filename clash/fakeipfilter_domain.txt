@@ -155,3 +155,15 @@ ps.res.netease.com
 #LOL语音
 +.gcloudcs.com
 +.gcloudsdk.com
+# 苹果商城导致的问题 Apple App Store Fix
+init.itunes.apple.com
+appstore.com
+*.appstore.com
+*.apple.com
+*.icloud.com
+*.mzstatic.com
+itunes.apple.com
+ppq.apple.com
++.push.apple.com
+captive.apple.com
+*.apple-dns.net
