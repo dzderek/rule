@@ -10,3 +10,5 @@ DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,clashverge.dev
 DOMAIN-SUFFIX,69shuba.com
 DOMAIN-SUFFIX,ipwho.is
+DOMAIN-SUFFIX,zlibrarya.online
+DOMAIN-SUFFIX,z-lib.sk
