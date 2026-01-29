@@ -10,8 +10,10 @@ DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,clashverge.dev
 DOMAIN-SUFFIX,69shuba.com
 DOMAIN-SUFFIX,ipwho.is
+# --- zlibrary 相关 ---
 DOMAIN-SUFFIX,zlibrarya.online
 DOMAIN-SUFFIX,z-lib.sk
+# --- TMM 刮削相关 ---
 DOMAIN-SUFFIX,tinymediamanager.org
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,themoviedb.org
