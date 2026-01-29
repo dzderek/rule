@@ -13,3 +13,7 @@ DOMAIN-SUFFIX,ipwho.is
 DOMAIN-SUFFIX,zlibrarya.online
 DOMAIN-SUFFIX,z-lib.sk
 DOMAIN-SUFFIX,tinymediamanager.org
+DOMAIN-SUFFIX,tmdb.org
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,plexapp.com
+DOMAIN-SUFFIX,fanart.tv
