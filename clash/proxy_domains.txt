@@ -7,8 +7,12 @@ DOMAIN-SUFFIX,europa.eu
 DOMAIN-SUFFIX,321n.net
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,clashverge.dev
-DOMAIN-SUFFIX,69shuba.com
 DOMAIN-SUFFIX,ipwho.is
+
+# --- 小说 相关 ---
+DOMAIN-SUFFIX,69shuba.com
+DOMAIN-SUFFIX,twkan.com
+
 # --- synology群晖 相关 ---
 DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,synologydownload.com
@@ -17,9 +21,11 @@ DOMAIN-SUFFIX,synologyupdate.com
 DOMAIN-SUFFIX,dyndns.org
 DOMAIN-SUFFIX,quickconnect.to
 DOMAIN-SUFFIX,quickconnect.cn
+
 # --- zlibrary 相关 ---
 DOMAIN-SUFFIX,zlibrarya.online
 DOMAIN-SUFFIX,z-lib.sk
+
 # --- TMM 刮削相关 ---
 DOMAIN-SUFFIX,tinymediamanager.org
 DOMAIN-SUFFIX,tmdb.org
