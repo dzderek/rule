@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,ipwho.is
 # --- 小说 相关 ---
 DOMAIN-SUFFIX,69shuba.com
 DOMAIN-SUFFIX,twkan.com
+DOMAIN-SUFFIX,101kks.com
 
 # --- synology群晖 相关 ---
 DOMAIN-SUFFIX,synology.com
