@@ -7,3 +7,4 @@ DOMAIN-SUFFIX,yongyizixun888.com
 DOMAIN-SUFFIX,snssdk.com
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,peiban.art
+DOMAIN-SUFFIX,lastpass.com
