@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,ipwho.is
 DOMAIN-SUFFIX,69shuba.com
 DOMAIN-SUFFIX,twkan.com
 DOMAIN-SUFFIX,101kks.com
+DOMAIN-SUFFIX,sudugu.org
 
 # --- synology群晖 相关 ---
 DOMAIN-SUFFIX,synology.com
