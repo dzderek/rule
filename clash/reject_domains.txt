@@ -8,3 +8,6 @@ DOMAIN-SUFFIX,twkan.com
 DOMAIN-SUFFIX,101kks.com
 DOMAIN-SUFFIX,sudugu.org
 DOMAIN-SUFFIX,oop.tw
+
+# --- 防止 沉迷 ---
+DOMAIN-SUFFIX,x.com
