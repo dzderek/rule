@@ -8,14 +8,6 @@ DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,clashverge.dev
 DOMAIN-SUFFIX,ipwho.is
 
-# --- 小说 相关 ---
-DOMAIN-SUFFIX,qidian.com
-DOMAIN-SUFFIX,69shuba.com
-DOMAIN-SUFFIX,twkan.com
-DOMAIN-SUFFIX,101kks.com
-DOMAIN-SUFFIX,sudugu.org
-DOMAIN-SUFFIX,oop.tw
-
 # --- synology群晖 相关 ---
 DOMAIN-SUFFIX,synology.com
 DOMAIN-SUFFIX,synologydownload.com
