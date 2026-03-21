@@ -4,4 +4,4 @@ DOMAIN-SUFFIX,clashverge.net
 
 
 # --- 防止 沉迷 ---
-DOMAIN-SUFFIX,x.com
+
