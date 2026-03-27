@@ -1,9 +1,12 @@
 DOMAIN-SUFFIX,pig333.cn
 DOMAIN-SUFFIX,europa.eu
-DOMAIN-SUFFIX,321n.net
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,ipwho.is
 DOMAIN-SUFFIX,twitter-ero-video-ranking.com
+
+# ---影视 相关 ---
+DOMAIN-SUFFIX,www.lwgod.tv
+DOMAIN-SUFFIX,321n.net
 
 # ---Openwrt 相关 ---
 DOMAIN-SUFFIX,bulianglin.com
