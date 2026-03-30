@@ -34,9 +34,4 @@ DOMAIN-SUFFIX,themoviedb.org
 DOMAIN-SUFFIX,plexapp.com
 DOMAIN-SUFFIX,fanart.tv
 
-# --- 小说 相关 ---
-DOMAIN-SUFFIX,69shuba.com
-DOMAIN-SUFFIX,twkan.com
-DOMAIN-SUFFIX,101kks.com
-DOMAIN-SUFFIX,sudugu.org
-DOMAIN-SUFFIX,oop.tw
+
