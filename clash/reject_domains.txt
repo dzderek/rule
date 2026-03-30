@@ -4,4 +4,11 @@ DOMAIN-SUFFIX,clashverge.net
 
 
 # --- 防止 沉迷 ---
+# --- 小说 相关 ---
+DOMAIN-SUFFIX,69shuba.com
+DOMAIN-SUFFIX,twkan.com
+DOMAIN-SUFFIX,101kks.com
+DOMAIN-SUFFIX,sudugu.org
+DOMAIN-SUFFIX,oop.tw
+DOMAIN-SUFFIX,qidian.com
 
