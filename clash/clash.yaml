@@ -89,8 +89,6 @@ dns:
     - https://doh.pub/dns-query
   nameserver: #默认的域名解析服务器
     - https://8.8.8.8/dns-query#RULES&ecs=223.5.5.0/24
-  fake-ip-filter:
-    - rule-set:fakeipfilter_domain
 
  
 ###出站策略#########################################
