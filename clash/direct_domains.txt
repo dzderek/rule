@@ -8,3 +8,4 @@ DOMAIN-SUFFIX,snssdk.com
 DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,peiban.art
 DOMAIN-SUFFIX,lastpass.com
+DOMAIN-SUFFIX,xuanyuan.run
