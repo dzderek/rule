@@ -9,3 +9,4 @@ DOMAIN-SUFFIX,bilibili.com
 DOMAIN-SUFFIX,peiban.art
 DOMAIN-SUFFIX,lastpass.com
 DOMAIN-SUFFIX,xuanyuan.run
+DOMAIN-SUFFIX,kaspersky.com
