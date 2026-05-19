@@ -10,3 +10,10 @@ DOMAIN-SUFFIX,peiban.art
 DOMAIN-SUFFIX,lastpass.com
 DOMAIN-SUFFIX,xuanyuan.run
 DOMAIN-SUFFIX,kaspersky.com
+
+# ---ollama 相关 ---
+DOMAIN-SUFFIX,ollama.com
+DOMAIN-SUFFIX,ollama.ai
+DOMAIN-SUFFIX,ollama.download
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
