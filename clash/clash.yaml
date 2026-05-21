@@ -89,7 +89,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver-policy:  # 前门精细分诊：已知国内域名直接交由国内 DoH 极速解析
-    "geosite:cn,private":
+    "rule-set:cn_domain,private_domain":
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
   nameserver: #默认的域名解析服务器
