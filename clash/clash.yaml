@@ -42,11 +42,11 @@ profile:
 
 # 嗅探(fakeip下其实可以不用嗅探)
 sniffer:
-  enable: false
+  enable: true
   sniff:
     HTTP:
       ports: [80, 8080-8880]
-      override-destination: false
+      override-destination: true
     TLS:
       ports: [443, 8443]
     QUIC:
@@ -74,26 +74,29 @@ dns:
   listen: 0.0.0.0:1053
   ipv6: false
   respect-rules: true  #是否遵循路由规则，本机和dns服务器之间的连接
+  
+  # --- Fake-IP 基础配置 ---
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter-mode: blacklist
   fake-ip-filter:
     - rule-set:fakeipfilter_domain
+  
   default-nameserver:  #默认 DNS, 用于解析下面DNS 服务器的域名，必须为 IP, 可为加密 DNS
     - 223.5.5.5
     - 119.29.29.29
-  proxy-server-nameserver:  #代理节点域名解析服务器，仅用于解析代理节点的域名
+  proxy-server-nameserver:  #代理节点域名解析服务器，仅用于解析代理节点/机场的域名
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  direct-nameserver: #用于 direct 出口域名解析的 DNS 服务器
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
-  nameserver: #默认的域名解析服务器
-    - https://8.8.8.8/dns-query#RULES&ecs=223.5.5.0/24
-  nameserver-policy:  # 精准路由核心：明确让国内和局域网域名直接走国内最快的 DNS
+  nameserver-policy:  # 前门精细分诊：已知国内域名直接交由国内 DoH 极速解析
     "geosite:cn,private":
       - https://dns.alidns.com/dns-query
       - https://doh.pub/dns-query
+  nameserver: #默认的域名解析服务器
+    - https://8.8.8.8/dns-query#RULES&ecs=223.5.5.0/24
+  direct-nameserver: #用于 direct 出口域名解析的 DNS 服务器
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
 
  
 ###出站策略#########################################
