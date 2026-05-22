@@ -33,7 +33,7 @@ profile:
   store-selected: true  #要求内核把你在面板上选中的节点（比如默认代理选了香港）存入 cache.db。
   store-fake-ip: true #要求内核把 Fake-IP 的解析记录存入 cache.db
 
-为防止使用插件朋友遇到面板问题，我注释掉了此模块。
+# zashboard面板
 external-controller: 0.0.0.0:9090
 secret: ""
 external-ui: ui
