@@ -42,11 +42,11 @@ external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-p
 
 # 嗅探(fakeip下其实可以不用嗅探)
 sniffer:
-  enable: true
+  enable: false
   sniff:
     HTTP:
       ports: [80, 8080-8880]
-      override-destination: true
+      override-destination: false
     TLS:
       ports: [443, 8443]
     QUIC:
