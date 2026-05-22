@@ -88,10 +88,6 @@ dns:
   proxy-server-nameserver:  #代理节点域名解析服务器，仅用于解析代理节点/机场的域名
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  nameserver-policy:  # 前门精细分诊：已知国内域名直接交由国内 DoH 极速解析
-    "rule-set:cn_domain,private_domain":
-      - https://dns.alidns.com/dns-query
-      - https://doh.pub/dns-query
   nameserver: #默认的域名解析服务器
     - https://8.8.8.8/dns-query#RULES&ecs=223.5.5.0/24
   direct-nameserver: #用于 direct 出口域名解析的 DNS 服务器
