@@ -1,6 +1,5 @@
 # --- 可疑 网站 ---
 DOMAIN-SUFFIX,clashverge.net
-DOMAIN-SUFFIX,owolist.cn
 
 
 # --- 防止 沉迷 ---
