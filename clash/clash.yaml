@@ -118,6 +118,7 @@ proxy-groups:
 
 ########################规则匹配#######################
 rules:
+  - IP-CIDR,192.168.31.0/24,直连,no-resolve
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连
   #个人规则
