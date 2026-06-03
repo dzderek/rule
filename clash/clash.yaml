@@ -114,6 +114,8 @@ dns:
     - rule-set:apple_domain
     - +.miwifi.com
     - +.push.apple.com
+    - '+.home-assistant.io'
+    - 'checkonline.home-assistant.io'
 
  
 ###出站策略#########################################
