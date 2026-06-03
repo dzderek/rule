@@ -90,10 +90,8 @@ dns:
   direct-nameserver: #专用于direct出口域名解析的 DNS 服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
-  nameserver: #主要 DNS 配置，影响所有直连，确保使用对大陆解析精准的 DNS
-    - tls://223.5.5.5:853
-    - https://dns.alidns.com/dns-query
-    - https://doh.pub/dns-query
+  nameserver: #托底dns，最终流向
+    - https://8.8.8.8/dns-query
   nameserver-policy: #配置查询域名使用的 DNS 服务器
     "rule-set:cn_domain,private_domain,apple_domain":
       - https://dns.alidns.com/dns-query
