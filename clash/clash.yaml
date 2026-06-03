@@ -89,13 +89,14 @@ dns:
     - tls://223.5.5.5:853
     - 223.5.5.5
   proxy-server-nameserver:  #专用于节点域名解析的 DNS 服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
-    - tls://223.5.5.5:853
-    - https://doh.pub/dns-query
+    - 223.5.5.5
+    - 119.29.29.29
   direct-nameserver: #专用于direct出口域名解析的 DNS 服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver: #托底dns，最终流向
     - https://8.8.8.8/dns-query
+    - https://cloudflare-dns.com/dns-query
   nameserver-policy: #配置查询域名使用的 DNS 服务器
     "rule-set:cn_domain,private_domain,apple_domain":
       - https://dns.alidns.com/dns-query
