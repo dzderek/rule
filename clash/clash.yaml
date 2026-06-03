@@ -92,8 +92,8 @@ dns:
   fake-ip-filter-mode: blacklist
   
   default-nameserver:  #默认 DNS, 用于解析下面DNS 服务器的域名，必须为 IP, 可为加密 DNS
-    - tls://223.5.5.5:853
     - 223.5.5.5
+    - 119.29.29.29
   proxy-server-nameserver:  #专用于节点域名解析的 DNS 服务器，非必要配置项，如果不填则遵循nameserver-policy、nameserver和fallback的配置
     - 223.5.5.5
     - 119.29.29.29
