@@ -34,6 +34,12 @@ profile:
   store-selected: true  #要求内核把你在面板上选中的节点（比如默认代理选了香港）存入 cache.db。
   store-fake-ip: true #要求内核把 Fake-IP 的解析记录存入 cache.db
 
+# zashboard面板
+external-controller: 0.0.0.0:9090
+secret: ""
+external-ui: ui
+external-ui-name: zashboard
+external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
 # 嗅探(fakeip下其实可以不用嗅探)
 sniffer:
