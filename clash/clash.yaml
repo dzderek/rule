@@ -142,7 +142,8 @@ proxy-groups:
   #- {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"}
   #- {name: 🇸🇬 狮城节点, type: select, include-all: true, filter: "(?=.*(新加坡|坡|狮城|SG|Singapore))^((?!(台|日|韩|深|美)).)*$"}
   #- {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?=.*(美国|US|(?i)States|America))^((?!(港|台|韩|新|日)).)*$"}
-  - {name: 🌐 全部节点, type: select, include-all: true}
+  #- {name: 🌐 全部节点, type: select, include-all: true} 注销掉只会就关闭了除了日本，香港，新加坡和美国之外的所有节点，只利用下面的就行
+  - {name: 🌐 全部节点, type: select, include-all: true, filter: "(香港|HK|Hong|日本|JP|Japan|新加坡|SG|Singapore|美国|US|America|States)"}
 
 
 ########################规则匹配#######################
