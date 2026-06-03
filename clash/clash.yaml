@@ -102,6 +102,11 @@ dns:
       - https://doh.pub/dns-query
   fake-ip-filter:
     - rule-set:fakeipfilter_domain
+    - rule-set:cn_domain
+    - rule-set:private_domain
+    - rule-set:apple_domain
+    - +.miwifi.com
+    - +.push.apple.com
 
  
 ###出站策略#########################################
