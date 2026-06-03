@@ -101,7 +101,7 @@ dns:
     - https://dns.alidns.com/dns-query
     - https://doh.pub/dns-query
   nameserver: #托底dns，最终流向
-    - https://8.8.8.8/dns-query
+    - https://dns.google/dns-query
     - https://cloudflare-dns.com/dns-query
   nameserver-policy: #配置查询域名使用的 DNS 服务器
     "rule-set:cn_domain,private_domain,apple_domain":
