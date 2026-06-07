@@ -45,13 +45,13 @@ external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-p
 sniffer:
   enable: true
   sniff:
-    HTTP:
-      ports: [80, 8080-8880]
-      override-destination: true
+#    HTTP:
+#      ports: [80]
+#      override-destination: true   把嗅探出来的域名强制替换掉原本的真实 IP
     TLS:
       ports: [443, 8443]
-    QUIC:
-      ports: [443, 8443]
+#    QUIC:  必须删除，或者将端口置空。
+#      ports: [443, 8443]
   skip-domain:
     - "Mijia Cloud"
     - "+.push.apple.com"
