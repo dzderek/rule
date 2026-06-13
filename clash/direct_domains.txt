@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,peiban.art
 DOMAIN-SUFFIX,lastpass.com
 DOMAIN-SUFFIX,xuanyuan.run
 DOMAIN-SUFFIX,kaspersky.com
+DOMAIN-SUFFIX,sibker.com
 
 # ---ollama 相关 ---
 DOMAIN-SUFFIX,ollama.com
