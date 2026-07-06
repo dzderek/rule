@@ -17,4 +17,4 @@ DOMAIN-SUFFIX,ollama.com
 DOMAIN-SUFFIX,ollama.ai
 DOMAIN-SUFFIX,ollama.download
 DOMAIN-SUFFIX,huggingface.co
-DOMAIN-SUFFIX,hf.co
+DOMAIN-SUFFIX,hf-mirror.com
