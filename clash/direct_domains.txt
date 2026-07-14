@@ -11,6 +11,7 @@ DOMAIN-SUFFIX,lastpass.com
 DOMAIN-SUFFIX,xuanyuan.run
 DOMAIN-SUFFIX,kaspersky.com
 DOMAIN-SUFFIX,sibker.com
+DOMAIN-SUFFIX,ld246.com
 
 # ---ollama 相关 ---
 DOMAIN-SUFFIX,ollama.com
