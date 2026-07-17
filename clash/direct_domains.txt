@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,xuanyuan.run
 DOMAIN-SUFFIX,kaspersky.com
 DOMAIN-SUFFIX,sibker.com
 DOMAIN-SUFFIX,ld246.com
+DOMAIN-SUFFIX,feishu.cn
 
 # ---ollama 相关 ---
 DOMAIN-SUFFIX,ollama.com
