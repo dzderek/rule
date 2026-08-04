@@ -129,7 +129,7 @@ proxy-groups:
   - {name: ♾️ Microsoft, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: ♾️ Telegram, type: select, proxies: [🚀 默认代理, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 香港自动, ♻️ 美国自动, 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, 直连]}
-  - {name: ♻️ AUTO自动, type: url-test, include-all: true, tolerance: 20, interval: 1800, filter: "(?i)新加坡|SG|Singapore|日本|JP|Japan"}
+  - {name: ♻️ AUTO自动, type: url-test, include-all: true, tolerance: 20, interval: 900, filter: "(?i)新加坡|SG|Singapore|日本|JP|Japan"}
   - {name: 🔯 香港故转, type: fallback, include-all: true, interval: 1800, filter: "(?=.*(香港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 1800, filter: "(?=.*(香港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: 🔯 日本故转, type: fallback, include-all: true, interval: 900, filter: "(?=.*(日本|JP|(?i)Japan))^((?!(港|台|韩|新|美)).)*$"}
