@@ -2,5 +2,4 @@
 DOMAIN-SUFFIX,clashverge.net
 
 
-# --- 防止 沉迷 奶头乐 ---
-DOMAIN-SUFFIX,qidian.com
+
