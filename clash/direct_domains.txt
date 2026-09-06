@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,kaspersky.com
 # --白月光 ---
 DOMAIN-SUFFIX,asiassn.com
 DOMAIN-SUFFIX,sibker.com
+DOMAIN-SUFFIX,bygcloud.com
 
 # ---ollama 相关 ---
 DOMAIN-SUFFIX,ollama.com
