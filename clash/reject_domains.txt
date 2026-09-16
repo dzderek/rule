@@ -3,3 +3,7 @@ DOMAIN-SUFFIX,clashverge.net
 
 # --- 防止 成瘾的网站 ---
 DOMAIN-SUFFIX,qidian.com
+DOMAIN-SUFFIX,shudugu.org
+DOMAIN-SUFFIX,sudugu.org
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,v2ex.com
