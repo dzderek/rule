@@ -1,5 +1,5 @@
 # --- 可疑 网站 ---
 DOMAIN-SUFFIX,clashverge.net
 
-
-
+# --- 防止 成瘾的网站 ---
+DOMAIN-SUFFIX,qidian.com
