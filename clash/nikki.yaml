@@ -1,5 +1,6 @@
 #官方文档https://wiki.metacubex.one/config/general/
 #官方ymal配置https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
+# DNS模块,官方文档地址https://wiki.metacubex.one/config/dns/#direct-nameserver
 
 # ================================================================
 # 1. 节点订阅
@@ -21,8 +22,11 @@ proxy-providers:
 proxies:
   - {name: 直连, type: direct}
   
-# 全局配置 
+# ================================================================
+# 2. 基础运行与局域网代理
+# ================================================================
 mixed-port: 7893
+# 保留局域网代理；仅允许下方指定网段访问。
 allow-lan: true
 bind-address: "*"
 ipv6: false
@@ -32,17 +36,25 @@ log-level: warning
 find-process-mode: 'off'
 keep-alive-idle: 600
 keep-alive-interval: 15
+# 显式指定规则模式，避免依赖客户端当前的默认模式。
+mode: rule
 profile:
   store-selected: true  #要求内核把你在面板上选中的节点（比如默认代理选了香港）存入 cache.db。
   store-fake-ip: true #要求内核把 Fake-IP 的解析记录存入 cache.db
 
-# zashboard面板
+# ================================================================
+# 3. Zashboard 面板与控制 API
+#    仅绑定旁路由 LAN 地址，供局域网设备访问面板；不监听其他网卡。
+# ================================================================
 external-controller: 0.0.0.0:9090
 secret: "123456"
 external-ui: ui
 external-ui-name: zashboard
 external-ui-url: "https://github.com/Zephyruso/zashboard/archive/refs/heads/gh-pages.zip"
 
+# ================================================================
+# 4. 流量嗅探
+# ================================================================
 # 嗅探(fakeip下其实可以不用嗅探)
 sniffer:
   enable: true
@@ -61,6 +73,9 @@ sniffer:
     - "+.oray.com"
     - "+.sunlogin.net"
 
+# ================================================================
+# 5. Nikki 接管的 TUN 入站
+# ================================================================
 # 入站  
 tun:
   enable: true
@@ -73,7 +88,9 @@ tun:
   auto-redirect: false
   auto-detect-interface: false
 
-# DNS模块,官方文档地址https://wiki.metacubex.one/config/dns/#direct-nameserver
+# ================================================================
+# 6. DNS 与 Fake-IP
+# ================================================================
 dns:
   enable: true
   cache-algorithm: arc
@@ -114,14 +131,18 @@ dns:
     - rule-set:cn_domain
     - rule-set:private_domain
     - rule-set:apple_domain
+    - +.lan
+    - +.local
     - +.miwifi.com
     - +.push.apple.com
     - '+.home-assistant.io'
     - 'checkonline.home-assistant.io'
-
  
-###出站策略#########################################
+# ================================================================
+# 7. 出站策略：先选择业务策略，再由地区自动组挑选节点
+# ================================================================
 proxy-groups:
+  # 常用业务的手动选择入口
   - {name: 🚀 默认代理, type: select, proxies: [♻️ AUTO自动, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 香港自动, ♻️ 美国自动, 直连]}
   - {name: ♾️ YouTube, type: select, proxies: [🚀 默认代理, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 香港自动, ♻️ 美国自动, 直连]}
   - {name: ♾️ Google, type: select, proxies: [🚀 默认代理, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 香港自动, ♻️ 美国自动, 直连]}
@@ -131,6 +152,7 @@ proxy-groups:
   - {name: ♾️ Microsoft, type: select, proxies: [直连, 🚀 默认代理]}
   - {name: ♾️ Telegram, type: select, proxies: [🚀 默认代理, ♻️ 日本自动, ♻️ 狮城自动, ♻️ 香港自动, ♻️ 美国自动, 直连]}
   - {name: 🐟 漏网之鱼, type: select, proxies: [🚀 默认代理, 直连]}
+  # 自动测速/故障转移组
   - {name: ♻️ AUTO自动, type: fallback, proxies: [♻️ 日本自动, ♻️ 狮城自动], interval: 600}
   #- {name: 🔯 香港故转, type: fallback, include-all: true, interval: 600, filter: "(?=.*(香港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
   - {name: ♻️ 香港自动, type: url-test, include-all: true, tolerance: 20, interval: 600, filter: "(?=.*(香港|HK|(?i)Hong))^((?!(台|日|韩|新|深|美)).)*$"}
@@ -148,19 +170,21 @@ proxy-groups:
   #- {name: 🌐 全部节点, type: select, include-all: true} 注销掉只会就关闭了除了日本，香港，新加坡和美国之外的所有节点，只利用下面的就行
   - {name: 🌐 全部节点, type: select, include-all: true, filter: "(香港|HK|Hong|日本|JP|Japan|新加坡|SG|Singapore|美国|US|America|States)"}
 
-
-########################规则匹配########################
+# ================================================================
+# 8. 规则匹配
+#    规则自上而下命中；个人规则优先，专用业务规则随后。
+# ================================================================
 rules:
   - IP-CIDR,192.168.31.0/24,直连,no-resolve
   - RULE-SET,private_ip,直连,no-resolve
   - RULE-SET,private_domain,直连
+  
   #个人规则
   - RULE-SET,my_direct_domains,直连
   - RULE-SET,my_proxy_domains,🚀 默认代理
   - RULE-SET,my_reject_domains,REJECT
 
-  #其余的规则
-  - RULE-SET,proxylite,🚀 默认代理
+  # 专用业务规则：放在通用代理规则之前，确保面板选择会生效。
   - RULE-SET,ai,♾️ ChatGPT
   - RULE-SET,github_domain,♾️ GitHub
   - RULE-SET,youtube_domain,♾️ YouTube
@@ -169,16 +193,23 @@ rules:
   - RULE-SET,microsoft_domain,♾️ Microsoft
   - RULE-SET,apple_domain,直连
   - RULE-SET,telegram_domain,♾️ Telegram
+
+  # IP 型专用业务规则
   - RULE-SET,apple_ip,直连
   - RULE-SET,google_ip,♾️ Google
   - RULE-SET,telegram_ip,♾️ Telegram
+
+  # 通用代理与地区兜底规则
+  - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,geolocation-!cn,🚀 默认代理
   - RULE-SET,cn_domain,直连
   - RULE-SET,cn_ip,直连
   - MATCH,🐟 漏网之鱼
 
 
-#######规则集#############################################
+# ================================================================
+# 9. 远程规则集
+# ================================================================
 ## type:可选http/file/inline  behavior:可选domain/ipcidr/classical format:可选yaml/text/mrs
 
 rule-providers: 
