@@ -1,7 +1,9 @@
 #官方文档https://wiki.metacubex.one/config/general/
 #官方ymal配置https://github.com/MetaCubeX/mihomo/blob/Meta/docs/config.yaml
 
-
+# ================================================================
+# 1. 节点订阅
+# ================================================================
 proxy-providers:
   Airport1:
     url: "机场订阅地址"
