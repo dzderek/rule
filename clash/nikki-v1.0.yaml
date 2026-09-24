@@ -32,7 +32,7 @@ bind-address: "*"
 ipv6: false
 unified-delay: true
 tcp-concurrent: true
-log-level: warning
+log-level: info
 find-process-mode: 'off'
 keep-alive-idle: 600
 keep-alive-interval: 15
@@ -79,7 +79,7 @@ sniffer:
 # 入站  
 tun:
   enable: true
-  stack: mixed   # system/gvisor/mixed
+  stack: mixed   ## system/gvisor/mixed ,如果内核版本大于v1.19.31，此处可以改为自研协议栈 mips ，理论上性能更好。
   dns-hijack: ["any:53", "tcp://any:53"]
   #使用nikki,混入全部不修改的情况,开启接口指定为nikki
   #device: nikki
