@@ -8,6 +8,9 @@ DOMAIN-SUFFIX,twitter-ero-video-ranking.com
 DOMAIN-SUFFIX,www.lwgod.tv
 DOMAIN-SUFFIX,321n.net
 
+# ---hermes agent 相关 ---
+DOMAIN-SUFFIX,nousresearch.com
+
 # ---Openwrt 相关 ---
 DOMAIN-SUFFIX,bulianglin.com
 DOMAIN-SUFFIX,ssrdog.com
