@@ -17,13 +17,13 @@ DOMAIN-SUFFIX,ssrdog.com
 DOMAIN-SUFFIX,clashverge.dev
 
 # --- synology群晖 相关 ---
-DOMAIN-SUFFIX,synology.com
-DOMAIN-SUFFIX,synologydownload.com
-DOMAIN-SUFFIX,synology.cn
-DOMAIN-SUFFIX,synologyupdate.com
-DOMAIN-SUFFIX,dyndns.org
-DOMAIN-SUFFIX,quickconnect.to
-DOMAIN-SUFFIX,quickconnect.cn
+#DOMAIN-SUFFIX,synology.com
+#DOMAIN-SUFFIX,synologydownload.com
+#DOMAIN-SUFFIX,synology.cn
+#DOMAIN-SUFFIX,synologyupdate.com
+#DOMAIN-SUFFIX,dyndns.org
+#DOMAIN-SUFFIX,quickconnect.to
+#DOMAIN-SUFFIX,quickconnect.cn
 
 # --- zlibrary 相关 ---
 DOMAIN-SUFFIX,zlibrarya.online
